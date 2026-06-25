@@ -17,9 +17,7 @@ import User from "./src/models/users.js";
 import Review from "./src/models/reviews.js";
 
 const app = express();
-app.use(
-  cors({ origin: "https://wander-lust-frontend-fawn.vercel.app/" }),
-);
+app.use(cors({ origin: "https://wander-lust-frontend-fawn.vercel.app" }));
 
 // mongo and port connection
 const connection = async () => {

@@ -45,6 +45,12 @@ app.get("/", async (req, res) => {
   res.json(data);
 });
 
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        status: "OK"
+    });
+});
+
 app.get("/signup", (req, res) => {
   console.log(req.body.user, "is saved");
   res.send("you are at the signup page.");

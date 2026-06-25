@@ -18,7 +18,7 @@ import Review from "./src/models/reviews.js";
 
 const app = express();
 app.use(
-  cors({ origin: "https://wander-lust-frontend-43shcv8qi-mkt12.vercel.app/" }),
+  cors({ origin: "https://wander-lust-frontend-fawn.vercel.app/" }),
 );
 
 // mongo and port connection

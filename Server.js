@@ -3,6 +3,7 @@ dotenv.config();
 
 // console.log("file form .env", process.env.Mongo_Atlas_Url);
 const Mongo_Url = process.env.Mongo_Atlas_Url;
+const Port = process.env.Port || 8080;
 
 // packages
 import express from "express";
@@ -16,11 +17,13 @@ import User from "./src/models/users.js";
 import Review from "./src/models/reviews.js";
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(
+  cors({ origin: "https://wander-lust-frontend-43shcv8qi-mkt12.vercel.app/" }),
+);
 
 // mongo and port connection
 const connection = async () => {
-  app.listen(8080, () => {
+  app.listen(Port, () => {
     console.log("connected to port");
   });
 
